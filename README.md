@@ -12,7 +12,7 @@ The original plan was: two VMs, Ubuntu Server + Windows 11, talking to each othe
 
 
 ## Architecture
-Full illustrated network diagram: [`docs/network-diagram.png`](docs/network-diagram.md)
+Full illustrated network diagram: [`docs/network-diagram.png`](docs/network-diagram.png)
 
 
 ## Why the plan changed
