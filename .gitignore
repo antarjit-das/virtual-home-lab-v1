@@ -1,0 +1,25 @@
+# i am aware my repo doesnt have any such critical stuff in here,
+# like SSH keys or .vdi files, or anything else really, that would need a .gitignore file...
+# i have made this section specifically for habit building purposes, so that i can get used to using .gitignore files in my
+# repos, and not have to worry about accidentally committing sensitive data in the future, and
+# also to make sure that for any future commits or major change, the .gitignore file is already in place.
+
+## VirtualBox junk
+*.vdi
+*.vbox
+*.vbox-prev
+*.vmdk
+*.ova
+*.iso
+
+# Logs
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Code Editor junk (VS Code for me)
+.vscode/
+.idea/
+*.swp

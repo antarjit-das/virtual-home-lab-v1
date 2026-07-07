@@ -1,0 +1,15 @@
+# /etc/fail2ban/jail.local
+
+# Local override file created instead of editing jail.conf
+# directly, so that any rollback is easier (backing up)
+
+# Verify post-editing with: sudo fail2ban-client -t
+
+[DEFAULT]
+bantime=30m            #ban duration
+findtime=10m           #the interval within which attempts be made to count for monitoring
+maxretry=3             #max failed attempts before IP ban
+backend=systemd        #reading authlogs directly from systemd-journald
+
+[sshd]
+enabled=true

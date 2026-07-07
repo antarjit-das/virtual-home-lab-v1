@@ -1,0 +1,21 @@
+
+# Location on the VM: /etc/netplan/00-installer-config.yaml
+#
+# Fix applied: dhcp4 and dhcp6 both set to false, static address
+# added under enp0s3 so the VM always uses 192.168.56.10 instead
+# of grabbing a dynamic DHCP-assigned address
+#
+# Confirm your actual interface name first with `ip a` before
+# applying this,  enp0s3 is what showed up on this build, yours may be different. If so, change the interface name in this file to match.
+# This is the network config written by 'subiquity'
+network:
+  ethernets:
+    enp0s3:
+      dhcp4: false
+      dhcp6: false
+      addresses:
+        - 192.168.56.10/24
+      match:
+        macaddress: 08:00:27:bf:e2:65
+      set-name: enp0s3
+  version: 2

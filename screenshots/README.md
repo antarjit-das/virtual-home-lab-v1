@@ -1,0 +1,16 @@
+# Screenshots
+- 01-vm-creation-summary.png
+- 02-port-forwarding-rules.png
+- 03-ssh-success-localhost.png
+- 04-windows11-vdi-error.png
+- 05-ram-usage-taskmanager.png
+- 06-hostonly-adapter-config.png
+- 07-netplan-dynamic-ip.png
+- 08-netplan-config-edit.png
+- 09-static-ip-ping.png
+- 10-ssh-success-static-ip.png
+- 11-ufw-setup.png
+- 12-listening-ports.png
+- 13-fail2ban-config-error.png
+- 14-sshd-and-fail2ban-status.png
+- 15-post-hardened-snapshot.png

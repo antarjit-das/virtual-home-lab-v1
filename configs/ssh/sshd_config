@@ -1,0 +1,33 @@
+# File Location on my VM (should be same or similar for all) = /etc/ssh/sshd_config
+#
+# NOTE: this is not the full file. It's the set of lines
+# that were actually uncommented and changed from Ubuntu's defaults during the
+# hardening pass, kept here for reference. Back up your own
+# sshd_config before editing:
+#   sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.backup
+
+# Blocks direct root login over SSH. Forces normal user login + sudo for anything administrative.
+PermitRootLogin no
+
+# Left on for now. Plan is to switch to key-based auth and then flip this to 'no'
+# also see PubkeyAuthentication note below.
+PasswordAuthentication yes
+
+# Enabled ahead of actually setting up SSH keys
+specifically so I don't lock myself out the moment keys are configured.
+PubkeyAuthentication yes
+
+# Blocks any account with no password from authenticating via SSH.
+PermitEmptyPasswords no
+
+# Headless/terminal-only server, so no GUI forwarding needed.
+X11Forwarding no
+
+# Disconnects a client after 3 failed login attempts. Basic anti-brute-force measure on top of Fail2ban.
+MaxAuthTries 3
+
+# Seconds given to a connecting client to authenticate before the login session expires.
+LoginGraceTime 50
+
+# Caps maximum simultaneous SSH sessions per connection.
+MaxSessions 2
