@@ -14,7 +14,7 @@ PermitRootLogin no
 PasswordAuthentication yes
 
 # Enabled ahead of actually setting up SSH keys
-specifically so I don't lock myself out the moment keys are configured.
+# specifically so I don't lock myself out the moment keys are configured.
 PubkeyAuthentication yes
 
 # Blocks any account with no password from authenticating via SSH.
